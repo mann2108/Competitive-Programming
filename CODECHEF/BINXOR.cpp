@@ -1,6 +1,3 @@
-/// @author mann2108
-/// Problem : DEC19B BINXOR
-
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -9,31 +6,31 @@ const ll mod=1000000007;
 ll factorial[100001];
 
 ll power(ll a, ll b, ll mod){
-	ll x = 1, y = a;
-	while (b > 0){
-		if (b%2){
-			x = (x*y)%mod;
-		}
-		y = (y*y)%mod;
-		b /= 2;
-	}
-	return x%mod;
+ ll x = 1, y = a;
+ while (b > 0){
+  if (b%2){
+   x = (x*y)%mod;
+  }
+  y = (y*y)%mod;
+  b /= 2;
+ }
+ return x%mod;
 }
 
 ll modular_inverse(ll n, ll mod=mod){
-	return power(n, mod-2, mod);
+ return power(n, mod-2, mod);
 }
 
 ll nCr(ll n, ll k, ll mod=mod){
-	return (factorial[n]*((modular_inverse(factorial[k])*modular_inverse(factorial[n-k]))%mod))%mod;
+ return (factorial[n]*((modular_inverse(factorial[k])*modular_inverse(factorial[n-k]))%mod))%mod;
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     factorial[0] = 1;
-	for(ll i = 1 ; i <= 100000 ; i++)
-		factorial[i] = (factorial[i-1]*i)%mod;
+ for(ll i = 1 ; i <= 100000 ; i++)
+  factorial[i] = (factorial[i-1]*i)%mod;
     ll t;
     cin>>t;
     while(t--){
@@ -64,4 +61,3 @@ int main(){
         cout<<ans<<endl;
     }
 }
-
