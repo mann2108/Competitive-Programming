@@ -1,5 +1,5 @@
 /// @author mann2108
-/// Problem : DEC19B STICNOT
+/// Problem : STICNOT (Greedy BFS on TREE)
 
 #include<bits/stdc++.h>
 
@@ -127,4 +127,3 @@ int main(){
         cout<<coin<<endl;
     }
 }
-
