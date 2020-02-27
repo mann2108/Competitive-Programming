@@ -1,4 +1,3 @@
-
 /* HEADER DECLARATION BLOCK */
 
 #include<bits/stdc++.h>
