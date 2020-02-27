@@ -1,5 +1,6 @@
 /// @author mann2108
-/// Problem : DEC19B BINNADD
+/// Problem : BINNADD
+
 
 #include<bits/stdc++.h>
 
@@ -75,4 +76,3 @@ int main(){
         }
     }
 }
-
