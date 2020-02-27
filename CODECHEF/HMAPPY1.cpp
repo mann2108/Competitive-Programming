@@ -1,3 +1,10 @@
+/*
+NAME:- Mann Mehta
+CODECHEF_ID:- mann2108
+*/
+
+/* Problem: HMAPPY1 */
+
 /* HEADER DECLARATION BLOCK */
 
 #include<bits/stdc++.h>
@@ -21,13 +28,7 @@ int main(){
 ll n,q,k;
 cin>>n>>q>>k;
 if(n<=ll(pow(10,3))&& q<=3*(ll(pow(10,3)))){
-
-
-
-
-
 ll a[n];
-
 for(ll i=0;i<n;i++){
     cin>>a[i];
 }
@@ -77,43 +78,12 @@ for(ll i=0;i<q;i++){
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 else{
-
-    ll a[n];
-
+ll a[n];
 ll cnt1=0,cnt2=-1;
 ll ind3=0,indF;
-
 ll secondMax=-1;
-
 for(ll i=0;i<n;i++){
     cin>>a[i];
     if(a[i]==1){
@@ -122,20 +92,15 @@ for(ll i=0;i<n;i++){
         if(cnt1>=cnt2){
             ind3=i;
             cnt2=cnt1;
-
         }
     }
     else{
         cnt1=0;
     }
 }
-
 //cout<<secondMax<<" "<<cnt2<<endl;
 ll ind1,ind2;
-
-
 bool flag1=true,flag2=true;
-
 for(ll i=0,j=n-1;i<n,j>=0;i++,j--){
     if(a[i]==0 && flag1==true){
         ind1=i;
@@ -145,7 +110,6 @@ for(ll i=0,j=n-1;i<n,j>=0;i++,j--){
         ind2=j;
         flag2=false;
     }
-
 }
 //cout<<ind1<<" "<<ind2<<" "<<ind3<<endl;
 for(ll i=ind3-cnt2-1;i<=ind3;i++){
@@ -236,7 +200,9 @@ for(ll i=0;i<q;i++){
 
     if(s[i]=='!'){
             cnt3++;
-            cnt3=cnt3%n;
+            if(cnt3==n){
+                cnt3=0;
+            }
 
      }
     if(s[i]=='?'){
@@ -265,17 +231,8 @@ for(ll i=0;i<q;i++){
 }
 //}
 }
-
-
-
-
-
-
-
-
 }
 
 return 0;
 /* END OF MAIN */
 }
-
