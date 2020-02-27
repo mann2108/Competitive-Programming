@@ -1,6 +1,3 @@
-/// @author mann2108
-/// Problem : DISHOWN
-
 /** DSU Implementation Optimize */
 
 #include<bits/stdc++.h>
@@ -8,7 +5,7 @@
 using namespace std;
 typedef long long int ll;
 
-ll Max = 1e5+5;
+ll Max = 1e4+5;
 
 vector<ll> s(Max);
 vector<ll> parent(Max);
@@ -19,56 +16,52 @@ ll  find_set(ll x){
 }
 
 void union_set(ll x,ll y){
-    if(rand()%2==0){
-        swap(x,y);
-    }
-    parent[x]=y;
+    if(s[x]>s[y]) parent[y]=x;
+    else if(s[y]>s[x]) parent[x]=y;
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
-    s.clear();
-    parent.clear();
+    ll t;
+    cin>>t;
+    while(t--){
 
-    ll n;
-    cin>>n;
+        s.clear();
+        parent.clear();
 
-    for(ll i=1;i<=n;i++){
-        parent[i]=i;
-    }
-    ll q;
-    cin>>q;
-    while(q--){
+        ll n;
+        cin>>n;
 
-        ll x;
-
-        cin>>x;
-        if(x==1){
-
-            ll a,b;
-
-            cin>>a>>b;
-            ll p1,p2;
-
-            p1=find_set(a);
-            p2=find_set(b);
-            union_set(p1,p2);
-
+        for(ll i=1;i<=n;i++){
+            cin>>s[i];
+            parent[i]=i;
         }
-        else{
+        ll q;
+        cin>>q;
+        while(q--){
 
-            ll u,v;
-            cin>>u>>v;
+            ll x;
 
-            if(find_set(u)==find_set(v)){
-                cout<<"Yes"<<endl;
+            cin>>x;
+            if(x==0){
+
+                ll a,b;
+
+                cin>>a>>b;
+                ll p1,p2;
+
+                p1=find_set(a);
+                p2=find_set(b);
+
+                if(p1==p2)cout<<"Invalid query!"<<endl;
+                else union_set(p1,p2);
             }
-
             else{
-                cout<<"No"<<endl;
-            }
+                ll x;
+                cin>>x;
+                cout<<find_set(x)<<endl;
 
+            }
         }
     }
-
 }
