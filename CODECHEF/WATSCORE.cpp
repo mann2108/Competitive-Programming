@@ -1,5 +1,5 @@
 /// @author mann2108
-/// Problem : DEC19B WATSCORE
+/// Problem : WATSCORE
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -33,4 +33,3 @@ int main(){
     }
 
 }
-
