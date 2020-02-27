@@ -1,4 +1,3 @@
-
 /* HEADER DECLARATION BLOCK */
 
 #include<bits/stdc++.h>
@@ -35,7 +34,7 @@ while(test_cases--){
     while(true){
 
          for(ll i=0;temp!=0;i++){
-            if(temp%10==3)
+            if(temp==3)
                 cnt3++;
             temp=temp/10;
          }
