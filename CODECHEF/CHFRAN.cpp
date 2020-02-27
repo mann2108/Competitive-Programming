@@ -1,6 +1,3 @@
-/// @author mann2108
-/// Problem : DEC19B CHEFRAN
-
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -38,13 +35,12 @@ int main(){
             while(temp--){
                 ll l,r;
                 cin>>l>>r;
-
                 if(entry[l]==0 and exit[l]==0)
-                points.pb(l);entry[l]+=1;
-
+                points.pb(l);
+                entry[l]+=1;
                 if(entry[r]==0 and exit[r]==0)
-                points.pb(r);exit[r]+=1;
-
+                points.pb(r);
+                exit[r]+=1;
             }
             sort(points.begin(),points.end());
             ll cnt = 0;
@@ -70,4 +66,3 @@ int main(){
         }
     }
 }
-
