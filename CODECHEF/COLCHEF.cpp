@@ -1,6 +1,3 @@
-/// @author mann2108
-/// Problem : COLCHEF
-
 /** DSU Implementation */
 
 #include<bits/stdc++.h>
@@ -33,7 +30,6 @@ void union_set(ll a,ll b){
 
 
 int main(){
-
     ll n;
     cin>>n;
 
@@ -43,16 +39,12 @@ int main(){
 
     ll q;
     cin>>q;
-
     while(q--){
-
         ll x,a,b;
         cin>>x>>a>>b;
-
         if(x==0){
             union_set(a,b);
         }
-
         else{
             if(find_set(a)==find_set(b)){
                 cout<<"YES"<<endl;
