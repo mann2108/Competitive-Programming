@@ -29,14 +29,12 @@ int main(){
         cin>>n;
         vector<ll> adj[n+1];
         ll a[n+1];
-
+        ll u,v;
         for(ll i=0;i<n-1;i++){
-            ll u,v;
             cin>>u>>v;
             adj[u].pb(v);
             adj[v].pb(u);
         }
-
 
         for(ll i=1;i<=n;i++)cin>>a[i];
         vector<ll> cities;
