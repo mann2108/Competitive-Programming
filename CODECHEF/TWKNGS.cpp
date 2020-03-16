@@ -35,7 +35,6 @@ int main(){
             adj[u].pb(v);
             adj[v].pb(u);
         }
-
         for(ll i=1;i<=n;i++)cin>>a[i];
         vector<ll> cities;
         for(ll i=1;i<=n;i++){
